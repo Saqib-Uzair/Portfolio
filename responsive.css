@@ -1,0 +1,216 @@
+/* ============================
+   Responsive Design Overrides
+   ============================ */
+
+/* ---- Tablet & small desktop (<= 1024px) ---- */
+@media (max-width: 1024px) {
+    .about-div {
+        width: 80%;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .jobs {
+        width: 70%;
+    }
+
+    .education-description {
+        width: 70%;
+    }
+}
+
+/* ---- Tablet (<= 768px) ---- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    nav {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+        margin-left: 20px;
+    }
+
+
+    .about {
+        margin-top: 60px;
+    }
+
+    .image-div img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-div {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 25px;
+    }
+
+    .about-me p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .project {
+        margin-top: 50px;
+    }
+
+    .project h3 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        width: 90%;
+    }
+
+    .grid-card h2 {
+        font-size: 24px;
+    }
+
+    .grid-card p {
+        font-size: 16px;
+    }
+
+    .skills {
+        margin-top: 60px;
+        width: 90%;
+    }
+
+    .skills-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .skills-div span {
+        font-size: 19px;
+    }
+
+    .skills-div p {
+        font-size: 16px;
+    }
+
+    .experience {
+        margin-top: 60px;
+        width: 90%;
+    }
+
+    .exp-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .jobs {
+        width: 100%;
+        /* margin: 20px 0; */
+        margin-left: 75px;
+
+    }
+
+    .job-title {
+        font-size: 22px;
+    }
+
+    .company {
+        font-size: 17px;
+    }
+
+    .jobs ul li {
+        font-size: 16px;
+    }
+
+    .education {
+        margin-top: 60px;
+        width: 90%;
+    }
+
+    .education-heading h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .education-description {
+        margin-left: 75px;
+        width: 100%;
+    }
+
+    .education-description h3 {
+        font-size: 22px;
+    }
+
+    .university {
+        font-size: 18px;
+    }
+
+    .relevant-course {
+        font-size: 16px;
+    }
+
+    footer {
+        margin-top: 60px;
+        font-size: 15px;
+        text-align: center;
+        padding: 0 15px;
+    }
+}
+
+/* ---- Mobile (<= 480px) ---- */
+@media (max-width: 480px) {
+    nav {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin-left: 15px;
+    }
+
+
+    .image-div img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about-me p {
+        font-size: 15px;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    .grid-card {
+        padding: 15px;
+    }
+
+    .skills-div span {
+        font-size: 17px;
+    }
+
+    .job-title {
+        font-size: 19px;
+    }
+
+    .education-description h3 {
+        font-size: 19px;
+    }
+}

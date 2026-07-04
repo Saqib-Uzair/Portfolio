@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    padding-top: 70px;
+    background-color: #111222;
+    color: white;
+}
+
+nav {
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #1b1c2f;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.logo:hover{
+    color: rgb(148, 148, 148);
+    transition: 0.15s;
+}
+
+
+.about {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image-div {
+    margin-bottom: 30px;
+}
+
+.image-div img {
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.about-div {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 65%;
+}
+
+.hero p {
+    color: lightgray;
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: bold   ;
+    line-height: 0.1;
+    margin-bottom: 50px;
+}
+
+.about-me p {
+    color: gray;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.project {
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project h3{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+
+.grid-card {
+    padding: 20px;
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 10px;
+    box-shadow: 10px 15px 15px rgba(148, 148, 148, 0.25);
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.grid-card h2{
+    font-size: 30px;
+}
+
+.grid-card p {
+    font-size: 18px;
+}
+
+a.github-btn {
+    text-decoration: none;
+    color:inherit;
+    display: inline-block;
+}
+
+.github-btn {
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #111222;
+    font-weight: bold;
+}
+
+.github-btn:hover {
+    background-color: rgb(148, 148, 148);
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.skills {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-heading h2{
+    font-size: 2.5rem;
+}
+
+.skills-div span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.skills-heading {
+    margin-bottom: 30px;
+}
+
+.skills-div {
+    line-height: 2;
+    text-align: center;
+}
+.skills-div p{
+    font-size: 20px;
+}
+
+    .experience {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .exp-heading h2{
+        font-size: 2.5rem;
+    }
+
+    .jobs {
+        width: 50%;
+        margin: 30px 10px;
+        line-height: 2;
+    }
+
+.job-title{
+    font-size: 30px;
+}
+
+.company {
+    font-style: italic;
+    font-size: 22px;
+}
+
+.jobs ul li {
+    font-size: 20px;
+}
+
+.education {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.education-description h3 {
+    font-size: 30px;
+}
+
+.CGPA {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.education-description {
+    width: 50%;
+    line-height: 2;
+}
+
+.university {
+    font-size: 24px;
+    font-style: italic;
+}
+
+.relevant-course {
+    font-size: 20px;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 100px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #1b1c2f;
+    color: lightgray;
+}
