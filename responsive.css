@@ -1,8 +1,17 @@
 /* ============================
    Responsive Design Overrides
+   Breakpoints: 1024 / 900 / 768 / 600 / 480 / 360
+   Mobile strategy: consistent side padding on every
+   section (instead of odd % widths) so content uses
+   the full screen width with equal margins, plus
+   tighter vertical rhythm between sections.
    ============================ */
 
-/* ---- Tablet & small desktop (<= 1024px) ---- */
+:root {
+    --mobile-pad: 24px;
+}
+
+/* ---- Small laptop / tablet landscape (<= 1024px) ---- */
 @media (max-width: 1024px) {
     .about-div {
         width: 80%;
@@ -22,7 +31,19 @@
     }
 }
 
-/* ---- Tablet (<= 768px) ---- */
+/* ---- Tablet (<= 900px) ---- */
+@media (max-width: 900px) {
+    .project {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .project-grid {
+        gap: 25px;
+    }
+}
+
+/* ---- Tablet portrait (<= 768px) ---- */
 @media (max-width: 768px) {
     body {
         padding-top: 60px;
@@ -37,9 +58,9 @@
         margin-left: 20px;
     }
 
-
     .about {
         margin-top: 60px;
+        padding: 0 var(--mobile-pad);
     }
 
     .image-div img {
@@ -48,14 +69,14 @@
     }
 
     .about-div {
-        width: 90%;
-        margin-top: 30px;
+        width: 100%;
+        margin-top: 25px;
     }
 
     .hero p {
         font-size: 18px;
         line-height: 1.4;
-        margin-bottom: 25px;
+        margin-bottom: 12px;
     }
 
     .about-me p {
@@ -65,36 +86,54 @@
 
     .project {
         margin-top: 50px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 var(--mobile-pad);
     }
 
     .project h3 {
         font-size: 1.8rem;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         text-align: center;
-        padding: 0 20px;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
-        width: 90%;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .grid-card {
+        padding: 20px;
+        width: 100%;
     }
 
     .grid-card h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .grid-card p {
         font-size: 16px;
     }
 
+    .github-btn {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+
     .skills {
         margin-top: 60px;
-        width: 90%;
+        width: 100%;
+        padding: 0 var(--mobile-pad);
     }
 
     .skills-heading h2 {
         font-size: 1.8rem;
+    }
+
+    .skills-div {
+        width: 100%;
+        line-height: 1.8;
     }
 
     .skills-div span {
@@ -107,7 +146,8 @@
 
     .experience {
         margin-top: 60px;
-        width: 90%;
+        width: 100%;
+        padding: 0 var(--mobile-pad);
     }
 
     .exp-heading h2 {
@@ -116,9 +156,7 @@
 
     .jobs {
         width: 100%;
-        /* margin: 20px 0; */
-        margin-left: 75px;
-
+        margin: 20px 0;
     }
 
     .job-title {
@@ -129,22 +167,26 @@
         font-size: 17px;
     }
 
+    .jobs ul {
+        padding-left: 20px;
+    }
+
     .jobs ul li {
         font-size: 16px;
     }
 
     .education {
         margin-top: 60px;
-        width: 90%;
+        width: 100%;
+        padding: 0 var(--mobile-pad);
     }
 
     .education-heading h2 {
         font-size: 1.8rem;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     .education-description {
-        margin-left: 75px;
         width: 100%;
     }
 
@@ -164,53 +206,242 @@
         margin-top: 60px;
         font-size: 15px;
         text-align: center;
-        padding: 0 15px;
+        padding: 0 var(--mobile-pad);
+    }
+}
+
+/* ---- Large phones (<= 600px) ---- */
+@media (max-width: 600px) {
+    :root {
+        --mobile-pad: 18px;
+    }
+
+    .about {
+        margin-top: 40px;
+    }
+
+    .image-div img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .about-me p {
+        font-size: 15.5px;
+        line-height: 1.55;
+    }
+
+    .project {
+        margin-top: 45px;
+    }
+
+    .project h3 {
+        font-size: 1.6rem;
+    }
+
+    .grid-card h2 {
+        font-size: 20px;
+    }
+
+    .grid-card p {
+        font-size: 15px;
+    }
+
+    .skills {
+        margin-top: 45px;
+    }
+
+    .skills-div p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .experience {
+        margin-top: 45px;
+    }
+
+    .job-title {
+        font-size: 20px;
+    }
+
+    .company {
+        font-size: 16px;
+    }
+
+    .education {
+        margin-top: 45px;
+    }
+
+    .education-description h3 {
+        font-size: 20px;
+    }
+
+    .university {
+        font-size: 16px;
     }
 }
 
 /* ---- Mobile (<= 480px) ---- */
 @media (max-width: 480px) {
+    :root {
+        --mobile-pad: 16px;
+    }
+
     nav {
-        flex-wrap: wrap;
-        height: auto;
+        justify-content: center;
         padding: 10px 0;
     }
 
     .logo {
-        margin-left: 15px;
+        margin-left: 0;
+        text-align: center;
     }
 
+    .about {
+        margin-top: 30px;
+    }
 
     .image-div img {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.4;
     }
 
     .about-me p {
-        font-size: 15px;
+        font-size: 14px;
+        text-align: left;
+        line-height: 1.6;
     }
 
     .project h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .grid-card {
-        padding: 15px;
+        padding: 16px;
+    }
+
+    .grid-card h2 {
+        font-size: 19px;
+    }
+
+    .grid-card p {
+        font-size: 14px;
+    }
+
+    .github-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .skills-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-div {
+        text-align: left;
     }
 
     .skills-div span {
-        font-size: 17px;
+        font-size: 16px;
+    }
+
+    .skills-div p {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .exp-heading h2 {
+        font-size: 1.5rem;
     }
 
     .job-title {
-        font-size: 19px;
+        font-size: 18px;
+    }
+
+    .company {
+        font-size: 15px;
+    }
+
+    .jobs ul li {
+        font-size: 14px;
+    }
+
+    .education-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .education-description {
+        text-align: left;
     }
 
     .education-description h3 {
-        font-size: 19px;
+        font-size: 18px;
+    }
+
+    .CGPA {
+        font-size: 16px;
+    }
+
+    .university {
+        font-size: 15px;
+    }
+
+    .relevant-course {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
+
+/* ---- Small phones (<= 360px) ---- */
+@media (max-width: 360px) {
+    :root {
+        --mobile-pad: 14px;
+    }
+
+    .image-div img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .about-me p {
+        font-size: 13px;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+
+    .grid-card h2 {
+        font-size: 17px;
+    }
+
+    .grid-card p {
+        font-size: 13px;
+    }
+
+    .job-title {
+        font-size: 16px;
+    }
+
+    .education-description h3 {
+        font-size: 16px;
     }
 }

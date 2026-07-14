@@ -57,6 +57,8 @@ nav {
 .image-div img {
     box-shadow: 0 10px 10px rgba(255, 255, 255, 0.5);
     border-radius: 50%;
+    height: 300px;
+    width: 300px;
     cursor: pointer;
 }
 
